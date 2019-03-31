@@ -10,7 +10,7 @@ describe('Pet', () => {
   });
 
   it('should create an instance from json object', () => {
-    const pet: Pet = new Pet({name: 'buddy', type: 'dog'});
+    const pet: Pet = new Pet({name: 'buddy', type: 'Dog'});
     expect(pet).toBeTruthy();
     expect(pet.name).toEqual('buddy');
     expect(pet.type).toEqual('Dog');

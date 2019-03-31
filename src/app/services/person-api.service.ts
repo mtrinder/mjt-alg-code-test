@@ -25,7 +25,7 @@ export class PersonService {
     })
   };
 
-  // HttpClient API get() method => Fetch employees list
+  // HttpClient API get() method => Fetch people data
   getPeople(): Observable<Person> {
     return this.http.get<Person>(this.apiURL)
     .pipe(

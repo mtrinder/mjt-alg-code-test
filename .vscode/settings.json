@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/d4317afd-765f-4de6-8d75-680723da8b34/resourceGroups/alg-code-test-mjt/providers/Microsoft.Web/sites/alg-code-test-mjt",
+    "appService.deploySubpath": ""
+}

@@ -34,4 +34,4 @@ Based on the instructions on [http://agl-developer-test.azurewebsites.net](http:
 
 ## Unit Test Output
 
-![Coverage Report](/assets/test-output.png)
+![Coverage Report](https://raw.githubusercontent.com/mtrinder/mjt-alg-code-test/master/test-output.png)

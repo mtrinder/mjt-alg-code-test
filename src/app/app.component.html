@@ -1,14 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
+
 <app-header></app-header>
+
 <div class="jumbotron">
-    <h1 class="display-4">Welcome to {{ title }}!</h1>
-    <p class="lead">A json web service has been set up at the url: http://agl-developer-test.azurewebsites.net/people.json</p>
-    <p class="mb-0">You need to write some code to consume the json and output a list of all the cats in alphabetical order under a heading of the gender of their owner.  </p>
-    <hr class="my-4">
-    <p class="lead">
-      <a class="btn btn-primary btn-lg" href="#" role="button">Run the code!</a>
-    </p>
-  </div>
+  <h1 class="display-4">Welcome to {{ title }}!</h1>
+  <p class="lead">Instructions:</p>
+  <p class="mb-0">A json web service has been set up at the url: http://agl-developer-test.azurewebsites.net/people.json</p>
+  <p class="mb-0">You need to write some code to consume the json and output a list of all the cats in alphabetical
+    order under a heading of the gender of their owner. </p>
+</div>
+
+<app-consume></app-consume>
 
 <app-footer></app-footer>
+
 <router-outlet></router-outlet>

@@ -1,3 +1,30 @@
-<p>
-  consume works!
-</p>
+<div class="container">
+    <!-- Show it when there is nt person -->
+    <div class="no-data text-center" *ngIf="AllPeople.length == 0">
+      <button class="btn btn-outline-primary" (click)="[loadAllPeople()]" >Run the Code!</button>
+    </div>
+
+    <!-- Employees list table, it hides when there is nt person -->
+    <div *ngIf="AllPeople.length !== 0">
+      <h3 class="mb-3 text-center">People List</h3>
+
+      <div class="col-md-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Age</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let person of AllPeople">
+              <td>{{person.name}}</td>
+              <td>{{person.gender}}</td>
+              <td>{{person.age}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>

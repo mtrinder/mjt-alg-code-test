@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
+import { PersonService } from '../services/person-api.service';
 
 @Component({
   selector: 'app-consume',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConsumeComponent implements OnInit {
 
-  constructor() { }
+  AllPeople: any = [];
+
+  constructor(
+    public restApi: PersonService,
+    public router: Router
+  ) { }
 
   ngOnInit() {
   }
 
+  // Get employees list
+  loadAllPeople() {
+    return this.restApi.getPeople().subscribe((data: {}) => {
+      this.AllPeople = data;
+    });
+  }
 }

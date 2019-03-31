@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxMdModule } from 'ngx-md';
 
 import { AlertModule } from 'ngx-bootstrap';
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -29,6 +30,7 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
+    NgxMdModule.forRoot(),
     AppRoutingModule,
     FormsModule,
     HttpClientModule,

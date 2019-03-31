@@ -53,12 +53,14 @@ export class ConsumeComponent implements OnInit {
     return this.restApi.getPeople().subscribe((data: {}) => {
       if (data) {
         const people: any = data;
-        const delayobservable = of('').pipe(delay(500));
+        const delayobservable = of('').pipe(delay(750));
         delayobservable.subscribe(s => {
           people.forEach((element: any) => { this.people.push(new Person(element)); });
           this.afterConsuming();
           });
         }
+    }, error => {
+      this.afterConsuming();
     });
   }
 }

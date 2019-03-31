@@ -2,7 +2,7 @@
     <!-- Show it when there is nt person -->
     <div class="no-data text-center" *ngIf="people.length == 0">
       <button class="btn btn-outline-primary" (click)="[loadAllPeople()]" >
-          <i class="glyphicon glyphicon-refresh spinning" *ngIf="buttonText === 'Consuming data ...'"></i>
+          <i class="fa fa-spinner fa-spin" *ngIf="buttonText === 'Consuming data ...'"></i>
           {{ buttonText }}
       </button>
     </div>
@@ -32,6 +32,6 @@
     </div>
 
     <div class="no-data text-center" *ngIf="people.length != 0">
-      <button class="btn btn-outline-primary" (click)="[loadAllPeople()]" >Run the Code!</button>
+      <button class="btn btn-outline-primary" (click)="[loadAllPeople()]" >{{ buttonText }}</button>
     </div>
   </div>

@@ -19,7 +19,7 @@ export class ConsumeComponent implements OnInit {
   malePets: Array<Pet>;
   femalePets: Array<Pet>;
   people: Array<Person>;
-  buttonText = 'Get Pet Names!';
+  buttonText = 'Get Cat Names!';
 
   constructor(
     public restApi: PersonService,
@@ -36,6 +36,7 @@ export class ConsumeComponent implements OnInit {
 
   beforeConsuming() {
     this.people = new Array<Person>();
+    this.genderWithPets = null;
     this.buttonText = 'Consuming data ...';
   }
 
@@ -43,7 +44,7 @@ export class ConsumeComponent implements OnInit {
     this.genderWithPets = new People(this.people);
     this.malePets = this.genderWithPets.collection.getValue('male');
     this.femalePets = this.genderWithPets.collection.getValue('female');
-    this.buttonText = 'Get Pet Names!';
+    this.buttonText = 'Get Cat Names!';
   }
 
   // Consume people data

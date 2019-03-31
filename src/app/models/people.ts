@@ -8,10 +8,9 @@ export class People {
   collection: Collections.Dictionary<string, Array<Pet>>;
 
   constructor(private data: Person[]) {
+    this.collection = new Collections.Dictionary<string, Array<Pet>>();
 
     if (data) {
-      this.collection = new Collections.Dictionary<string, Array<Pet>>();
-
       this.collection.setValue('male', new Array<Pet>());
       this.collection.setValue('female', new Array<Pet>());
 

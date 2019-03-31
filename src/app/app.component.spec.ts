@@ -2,6 +2,7 @@ import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
+import { CallbackPipe } from './callback.pipe';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -16,6 +17,7 @@ describe('AppComponent', () => {
       ],
       declarations: [
         AppComponent,
+        CallbackPipe,
         HeaderComponent,
         FooterComponent,
         ConsumeComponent

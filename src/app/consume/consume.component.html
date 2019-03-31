@@ -13,7 +13,7 @@
         <h3 class="mb-3">Male</h3>
         <div class="col-md-12">
           <ul>
-            <li *ngFor="let pet of malePets">
+            <li *ngFor="let pet of malePets | callback: filterIsCat">
               {{ pet.name }}
             </li>
           </ul>
@@ -23,7 +23,7 @@
           <h3 class="mb-3">Female</h3>
           <div class="col-md-12">
             <ul>
-              <li *ngFor="let pet of femalePets">
+              <li *ngFor="let pet of femalePets | callback: filterIsCat">
                 {{ pet.name }}
               </li>
             </ul>

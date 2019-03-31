@@ -22,7 +22,7 @@ describe('PersonService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should get users',
+  it('should get people with pets',
     inject(
       [HttpTestingController, PersonService],
       (

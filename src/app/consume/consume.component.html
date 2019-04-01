@@ -1,5 +1,5 @@
 <div class="container">
-    <!-- Show it when there is nt person -->
+    <!-- Show it when there is no data -->
     <div class="no-data text-center" *ngIf="people.length == 0">
       <button class="btn btn-outline-primary" (click)="[loadAllPeople()]" >
           <i class="fa fa-spinner fa-spin" *ngIf="buttonText === 'Consuming data ...'"></i>
@@ -7,7 +7,7 @@
       </button>
     </div>
 
-    <!-- Employees list table, it hides when there is nt person -->
+    <!-- List table, it hides when there is no data -->
     <div *ngIf="people.length !== 0">
       <div *ngIf="malePets.length !== 0">
         <h3 class="mb-3">Male</h3>

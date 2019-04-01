@@ -29,20 +29,20 @@ describe('PersonService', () => {
         httpMock: HttpTestingController,
         dataService: PersonService
       ) => {
-        const mockUsers = [
+        const mockPeople = [
           { name: 'Bob', gender: 'male', age: '20', pets: [{ name: 'buddy', type: 'dog'}] },
           { name: 'Sue', gender: 'female', age: '22', pets: [{ name: 'kitty', type: 'cat'}] }
         ];
 
         dataService.getPeople().subscribe((AllPeople: any = []) => {
-          expect(AllPeople).toEqual(mockUsers);
+          expect(AllPeople).toEqual(mockPeople);
         });
 
         const mockReq = httpMock.expectOne(dataService.apiURL);
 
         expect(mockReq.cancelled).toBeFalsy();
         expect(mockReq.request.responseType).toEqual('json');
-        mockReq.flush(mockUsers);
+        mockReq.flush(mockPeople);
 
         httpMock.verify();
       }

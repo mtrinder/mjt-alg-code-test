@@ -38,7 +38,7 @@ Based on the instructions on [http://agl-developer-test.azurewebsites.net](http:
 * If the HTTP request is successful, the resulting JSON data is deserialised with the Person & Pet data models
 * A People data model is used to divide the data by Gender and then sort the resulting lists in a dictionary
 * A third-party library called [typescript-collections](https://www.npmjs.com/package/typescript-collections) was used for storing and sorting the Person / Pet data
-* A custom generic [Pipe](https://angular.io/guide/pipes) - [callback.pipe.ts](./src/app/callback.pipe.ts) was used to filter and show only Cats in the browser output 
+* A custom generic [pipe](https://angular.io/guide/pipes) - [callback.pipe.ts](./src/app/callback.pipe.ts) was used to filter and show only Cats in the browser output 
 
 
 ## Unit Test Output
